@@ -39,13 +39,13 @@ while True:
                     playerMove = None
                     hand = hands[0]
                     fingers = detector.fingersUp(hand)
-                    if fingers == [0, 0, 0, 0, 0]:
+                    if fingers == [0, 0, 0, 0, 0] or fingers == [1, 0, 0, 0, 0]:
                         playerMove = 1
-                    if fingers == [1, 1, 1, 1, 1]:
+                    if fingers == [1, 1, 1, 1, 1] or fingers == [0, 1, 1, 1, 1]:
                         playerMove = 2
-                    if fingers == [0, 1, 1, 0, 0]:
+                    if fingers == [0, 1, 1, 0, 0] or fingers == [1, 1, 1, 0, 0]:
                         playerMove = 3
-                    if fingers == [0, 0, 1, 0, 0]:
+                    if fingers == [0, 0, 1, 0, 0] or fingers == [1, 0, 1, 0, 0]:
                         playerMove = 4
 
                     randomNumber = random.randint(1, 3)
