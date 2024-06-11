@@ -45,6 +45,8 @@ while True:
                         playerMove = 2
                     if fingers == [0, 1, 1, 0, 0]:
                         playerMove = 3
+                    if fingers == [0, 0, 1, 0, 0]:
+                        playerMove = 4
 
                     randomNumber = random.randint(1, 3)
                     imgAI = cv2.imread(f'Resources/{randomNumber}.png', cv2.IMREAD_UNCHANGED)
@@ -61,6 +63,8 @@ while True:
                             (playerMove == 1 and randomNumber == 2) or \
                             (playerMove == 2 and randomNumber == 3):
                         scores[0] += 1
+                    if playerMove == 4:
+                        scores[1] -= 1
 
     imgBG[234:654, 795:1195] = imgScaled
 
